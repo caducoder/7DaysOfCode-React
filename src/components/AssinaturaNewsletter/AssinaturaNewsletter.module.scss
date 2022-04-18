@@ -1,0 +1,22 @@
+.newsletter_banner {
+   margin: 0 300px;
+
+   .texto {
+      font-family: 'Montserrat', sans-serif;
+   }
+
+   .texto__grande {
+      font-family: 'Elsie Swash Caps', cursive;
+      font-size: 82px;
+   }
+
+   .formNewsletter {
+
+      .submitBtn {
+         border: none;
+         padding: 20px;
+         color: #FFF;
+         background-color: #FFCB47;
+      }
+   }
+}
