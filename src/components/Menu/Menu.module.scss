@@ -1,13 +1,12 @@
 .header {
+   position: relative;
    display: flex;
    flex-direction: row;
    align-items: baseline;
    justify-content: space-between;
    margin: 0 300px;
    padding: 20px;
-
-   .logo {}
-
+   z-index: 999;
 
    ul {
       display: flex;
