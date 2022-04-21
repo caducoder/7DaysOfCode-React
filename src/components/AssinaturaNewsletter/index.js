@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { send } from "emailjs-com";
 import styles from './AssinaturaNewsletter.module.scss'
 import { MdOutlineEmail } from 'react-icons/md'
 import broto from '../../assets/broto.png'
@@ -17,22 +16,10 @@ function AssinaturaNewsletter() {
       setInvalid(isValid)
    }, [email]);
 
-   const toSend = {
-      subject: "CasaVerde",
-      name: email.split(/@/)[0],
-      email: email,
-      reply_to: "casaverde@floresta.com.br"
-   }
-
    const submitForm = (ev) => {
       ev.preventDefault()
       if (REGEX_EMAIL.test(email)) {
-         send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, toSend, process.env.REACT_APP_PUBLIC_KEY)
-            .then((result) => {
-               console.log("Mensagem enviada com sucesso!");
-            }, (error) => {
-               alert("Erro ao enviar email.")
-            });
+         console.log("email valido")
          setInvalid(false)
          setIsOpen(true)
       } else {
@@ -47,7 +34,7 @@ function AssinaturaNewsletter() {
             <p className={styles.texto}>Sua casa com as</p>
             <p className={styles.texto__grande}>melhores plantas</p>
             <p className={styles.texto}>Encontre aqui uma vasta seleção de plantas para decorar a sua casa e torná-lo uma pessoa mais feliz no seu dia a dia. Entre com seu e-mail e assine nossa newsletter para saber das novidades da marca.</p>
-            <form action="#" id='myForm' className={styles.formNewsletter} onSubmit={submitForm}>
+            <form action="#" className={styles.formNewsletter} onSubmit={submitForm}>
                <MdOutlineEmail className={styles.email__icon} />
                <input
                   className={styles.email__input}
@@ -58,6 +45,8 @@ function AssinaturaNewsletter() {
                   value={email}
                   onChange={(ev) => setEmail(ev.target.value)}
                />
+
+
                <button className={styles.submitBtn} disabled={!invalid}>Assinar newsletter</button>
             </form>
 

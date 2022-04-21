@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Modal.module.scss'
 
 function Modal({ email, setIsOpen, setEmail }) {
+   console.log(email)
    return (
       <div className={styles.container}>
          <div className={styles.modal_box}>
