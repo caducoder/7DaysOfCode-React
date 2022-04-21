@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { send } from "emailjs-com";
 import styles from './AssinaturaNewsletter.module.scss'
 import { MdOutlineEmail } from 'react-icons/md'
 import broto from '../../assets/broto.png'
@@ -16,10 +17,22 @@ function AssinaturaNewsletter() {
       setInvalid(isValid)
    }, [email]);
 
+   const toSend = {
+      subject: "CasaVerde",
+      name: email.split(/@/)[0],
+      email: email,
+      reply_to: "casaverde@floresta.com.br"
+   }
+
    const submitForm = (ev) => {
       ev.preventDefault()
       if (REGEX_EMAIL.test(email)) {
-         console.log("email valido")
+         send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, toSend, process.env.REACT_APP_PUBLIC_KEY)
+            .then((result) => {
+               console.log("Mensagem enviada com sucesso!");
+            }, (error) => {
+               alert("Erro ao enviar email.")
+            });
          setInvalid(false)
          setIsOpen(true)
       } else {
