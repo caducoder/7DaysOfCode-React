@@ -1,0 +1,25 @@
+.container {
+   margin: 100px 300px;
+   padding: 20px;
+   font-family: 'Montserrat', sans-serif;
+
+   .titulo {
+      text-align: center;
+      opacity: 0.5;
+
+      &__grande {
+         font-family: 'Elsie Swash Caps', cursive;
+         text-align: center;
+         margin-top: 20px;
+         font-size: 4em;
+      }
+   }
+
+   .plantas {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 30px;
+      margin-top: 20px;
+   }
+}
