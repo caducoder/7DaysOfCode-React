@@ -1,0 +1,40 @@
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.3);
+   z-index: 999;
+   top: 0;
+   left: 0;
+
+   .modal_box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 400px;
+      flex-wrap: wrap;
+
+      .modal_text {
+         font-family: 'Montserrat', sans-serif;
+         font-size: 1.2em;
+      }
+
+      .confirm_btn {
+         padding: 5px 10px;
+         font-weight: bold;
+         border: none;
+         background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 209, 67, 1) 0%, rgba(255, 145, 83, 1) 90%);
+         color: #fff;
+         cursor: pointer;
+         align-self: center;
+         margin-top: 20px;
+      }
+   }
+}
