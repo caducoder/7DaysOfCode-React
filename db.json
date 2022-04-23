@@ -1,0 +1,46 @@
+{
+   "plantas": [
+      {
+         "id": 1,
+         "name": "Ajuga reptans",
+         "imageSrc": "/assets/ajuga.png",
+         "price": 20.0,
+         "estoque": 1
+      },
+      {
+         "id": 2,
+         "name": "Cordelyne fruticosa",
+         "imageSrc": "/assets/cordyline.png",
+         "price": 20.0,
+         "estoque": 3
+      },
+      {
+         "id": 3,
+         "name": "Crassula ovata",
+         "imageSrc": "/assets/crassula.png",
+         "price": 20.0,
+         "estoque": 0
+      },
+      {
+         "id": 4,
+         "name": "Cyperus rotundus",
+         "imageSrc": "/assets/cyperus.png",
+         "price": 20.0,
+         "estoque": 2
+      },
+      {
+         "id": 5,
+         "name": "Delairea odorata",
+         "imageSrc": "/assets/delairea.png",
+         "price": 20.0,
+         "estoque": 6
+      },
+      {
+         "id": 6,
+         "name": "Datura metel",
+         "imageSrc": "/assets/datura.png",
+         "price": 20.0,
+         "estoque": 4
+      }
+   ]
+}
